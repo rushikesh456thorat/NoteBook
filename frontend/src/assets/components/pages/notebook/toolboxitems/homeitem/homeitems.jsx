@@ -16,9 +16,7 @@ const HomeItems = () => {
   return (
     <>
       <ul className=" w-full  max-sm:min-w-80  max-sm:max-w-full max-sm:w-80   gap-3">
-        <li className="tooltip tooltip-bottom" data-tip="Add Page">
-          <AddPage></AddPage>
-        </li>
+
         <li className="tooltip tooltip-bottom" data-tip="Undo">
           <UndoRedo></UndoRedo>
         </li>
