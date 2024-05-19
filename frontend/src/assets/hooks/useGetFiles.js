@@ -40,8 +40,8 @@ const useGetFiles = () => {
                 if (sortBy === "date") {
                     // Sort by createdDate
                      tmp.sort((a, b) => {
-                      const dateA = new Date(a.createdDate).getTime();
-                      const dateB = new Date(b.createdDate).getTime();
+                      const dateA = new Date(a.modifiedDate).getTime();
+                      const dateB = new Date(b.modifiedDate).getTime();
                       if (sortDirection === "asc") {
                         return dateA - dateB;
                       } else {

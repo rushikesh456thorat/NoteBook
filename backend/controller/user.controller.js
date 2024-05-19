@@ -50,6 +50,7 @@ export const fileInfo = async (req,res)=>{
             fileId : file._id, 
             fileName : file.fileName,
             createdDate: file.createdDate,
+            modifiedDate: file.modifiedDate,
             size : file.size,                              //size is in bytes
         });
 

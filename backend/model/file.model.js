@@ -7,19 +7,19 @@ const fileSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    uuid : {
-        type: String,
-        required: true
-    },
     createdDate :{
         type: Date,
         required:true
+    },
+    modifiedDate :{
+        type: Date,
+        required:true,
     },
     size : {
         type: Number,
         required: true
     },
-    path : {
+    content : {
         type: String,
         required: true
     }

@@ -10,13 +10,6 @@ html {
 }
 
 
-.textArea ul{
-  list-style: disc;
-}
-.textArea ol{
-  list-style:decimal;
-}
-
 
 ::-webkit-scrollbar {
     width: 5px;

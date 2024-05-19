@@ -2,7 +2,7 @@ import path from "path";
 import Files from "../model/file.model.js";
 import Collections from "../model/collection.model.js"; 
 import fs from "fs/promises";
-import { v4 as uuidv4 } from 'uuid'; // Import uuidv4 function
+
 
 export const create = async (req, res) => {
     try {
@@ -15,16 +15,15 @@ export const create = async (req, res) => {
             collection = await Collections.create({ author });
         }
 
-        const fileId = uuidv4();
 
-        const dataFilePath = path.join("", `userStorage/${fileId}.html`);
+        
 
         const newFile = new Files({
             fileName: title,
-            uuid: fileId,
             createdDate: new Date(),
+            modifiedDate: new Date(),
             size: 0,
-            path: dataFilePath,
+            content: " ",
         });
 
         await newFile.save();
@@ -32,7 +31,6 @@ export const create = async (req, res) => {
         collection.files.push(newFile._id);
         await collection.save();
 
-        await fs.writeFile(dataFilePath, "", 'utf8');
 
         return res.status(201).json({
             _id: newFile._id,
@@ -68,10 +66,9 @@ export const save = async (req, res) => {
             return res.status(404).json({ error: "File not found" });
         }
 
-        await fs.writeFile(file.path, content, 'utf8');
-
-        const stats = await fs.stat(file.path);
-        file.size = stats.size;
+        file.content = content;
+        file.modifiedDate = new Date();
+        file.size = Buffer.byteLength(content, 'utf8');
         await file.save();
 
         return res.status(200).json({ message: "Content saved successfully" });
@@ -98,7 +95,7 @@ export const retrive = async (req, res) => {
         if (!file) {
             return res.status(404).json({ error: "File not found" });
         }
-        const content = await fs.readFile(file.path, 'utf8');
+        const content = file.content
         res.status(200).json({ content });
     }catch(error){
         console.log("Error in retrive file controller", error.message);
@@ -129,8 +126,7 @@ export const remove = async(req, res) =>{
              collection.files.pull(fileId);
              await collection.save();
 
-             const file = await Files.findOneAndDelete({_id: fileId}); 
-             await fs.unlink(file.path);   
+             const file = await Files.findOneAndDelete({_id: fileId});   
 
              res.status(200).json({message: `${file.fileName} deleted successfully `})
 

@@ -5,8 +5,8 @@ import useFiles from "../../../zustand/userFiles";
 
 const MenuItems = ({ index, file ,isChecked, onCheckboxChange }) => {
   const formatedSize = formatBytes(file.size);
-  const formattedDate = extractTime(file.createdDate);
-  
+  const formattedDate = extractTime(file.modifiedDate);
+ 
 
 
 
