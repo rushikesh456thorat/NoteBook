@@ -9,6 +9,17 @@ html {
   height: 100%;
 }
 
+/* styles.css or App.css */
+
+.tilt-effect {
+  transform: rotate(-3deg);
+}
+
+.tilt-effect:hover {
+  transform: rotate(3deg);
+}
+
+
 .innerwidth{
   width: 100vh;
 }
