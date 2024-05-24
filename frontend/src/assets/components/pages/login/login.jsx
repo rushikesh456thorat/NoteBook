@@ -10,6 +10,8 @@ const Login = () => {
     password: "",
   });
 
+  document.title = "NoteBook - Login"
+
   // eslint-disable-next-line no-unused-vars
   const {loading, login} = useLogin();
 

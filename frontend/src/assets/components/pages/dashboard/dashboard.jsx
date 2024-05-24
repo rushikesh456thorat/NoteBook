@@ -5,6 +5,9 @@ import ToolBar from './toolbar';
 import Footer from '../../utils/footer'; // Import Footer component
 
 const Dashboard = () => {
+
+  document.title = "NoteBook - Dashboard"
+
   return (
     <>
       <div className="flex flex-col w-full min-h-screen">

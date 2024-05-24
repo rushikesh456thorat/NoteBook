@@ -13,6 +13,8 @@ const SignUp = () => {
     confirmPassword: "",
   });
 
+  document.title = "NoteBook - SignUp"
+
   const { loading, signup } = useSignup();
 
   const handleSubmit = async (e) => {

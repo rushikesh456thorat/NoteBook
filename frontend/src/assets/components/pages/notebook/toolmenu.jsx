@@ -15,7 +15,7 @@ const ToolMenu = () => {
   return (
     <>
     
-      <div role="tablist "  className="  tabs  tabs-bordered">
+      <div role="tablist "  className="h-fit tabs w-full  tabs-bordered">
         <input
           type="radio"
           name="my_tabs_1"
@@ -25,8 +25,8 @@ const ToolMenu = () => {
           checked={activeTab === "file"}
           onChange={() => handleTabChange("file")}
         /> 
-        <div role="tabpanel" className={`tab-content  p-3 ${activeTab === "file" ? "active" : ""}`}>
-          <div className="navbar min-h-10 shadow-xl bg-base-100 rounded-lg">
+        <div role="tabpanel" className={`tab-content w-11/12   p-3 ${activeTab === "file" ? "active" : ""}`}>
+          <div className="navbar w-3/4  min-h-10 shadow-xl bg-base-100 rounded-lg">
             <FileItems />
           </div>
         </div>
@@ -40,7 +40,7 @@ const ToolMenu = () => {
           checked={activeTab === "home"}
           onChange={() => handleTabChange("home")}
         />
-        <div role="tabpanel" className={`tab-content p-3 ${activeTab === "home" ? "active" : ""}`}>
+        <div role="tabpanel" className={`tab-content  w-11/12  p-3 ${activeTab === "home" ? "active" : ""}`}>
           <div className="navbar    min-h-10 shadow-xl bg-base-100 rounded-lg">
             <HomeItems />
           </div>
@@ -56,7 +56,7 @@ const ToolMenu = () => {
           checked={activeTab === "view"}
           onChange={() => handleTabChange("view")}
         />
-        <div role="tabpanel" className={`tab-content p-3 ${activeTab === "view" ? "active" : ""}`}>
+        <div role="tabpanel" className={`tab-content w-11/12 p-3 ${activeTab === "view" ? "active" : ""}`}>
           <div className="navbar min-h-10 shadow-xl bg-base-100 rounded-lg">
             <ViewItems/>
           </div>
@@ -71,7 +71,7 @@ const ToolMenu = () => {
           checked={activeTab === "help"}
           onChange={() => handleTabChange("help")}
         />
-        <div role="tabpanel" className={`tab-content p-3 ${activeTab === "help" ? "active" : ""}`}>
+        <div role="tabpanel" className={`tab-content w-11/12 p-3 ${activeTab === "help" ? "active" : ""}`}>
           <div className="navbar min-h-10 shadow-xl bg-base-100 rounded-lg">
             <HelpItems></HelpItems>
           </div>

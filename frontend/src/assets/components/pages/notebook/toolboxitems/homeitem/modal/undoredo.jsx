@@ -1,4 +1,4 @@
-import {toggleStyles} from "../../../../../lib/formattingcontext"
+import { toggleStyles } from "../../../../../lib/formattingcontext";
 
 const UndoRedo = () => {
   return (
@@ -20,7 +20,7 @@ const UndoRedo = () => {
             />
           </svg>
         </button>
-        <div className="dropdown ">
+        <div className="dropdown z-[2000]">
           <button
             tabIndex={0}
             role="button"
@@ -82,11 +82,9 @@ const UndoRedo = () => {
                     d="m15 15 6-6m0 0-6-6m6 6H9a6 6 0 0 0 0 12h3"
                   />
                 </svg>
-
                 <span>Redo</span>
               </div>
             </li>
-            
           </ul>
         </div>
       </div>

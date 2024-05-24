@@ -4,10 +4,12 @@ import useFileRetrive from "../../../hooks/useFileRetrive.js";
 import useGetFileInfo from "../../../hooks/useGetFileInfo.js";
 import toast from "react-hot-toast";
 import useFileSave from "../../../hooks/useFileSave";
+import { useAuthContext } from "../../../context/AuthContext.jsx";
 
 const Page = ({ id }) => {
   const [fileInfo, setFileInfo] = useState({});
   const [content, setContent] = useState("");
+  const {authUser} = useAuthContext()
   const [currentContent, setCurrentContent] = useState("");
   const contentRef = useRef(null);
   const { getFileInfo } = useGetFileInfo();
@@ -18,13 +20,15 @@ const Page = ({ id }) => {
     const fetchData = async () => {
       try {
         const fileInfo = await getFileInfo(id);
-        setFileInfo(fileInfo);
+        await setFileInfo(fileInfo);
+        document.title=`${authUser.username} - ${fileInfo.fileName}`
       } catch (error) {
         toast.error(error.message);
       }
       try {
         const fileContent = await fileRetrive(id);
         setCurrentContent(fileContent);
+        
       } catch (error) {
         toast.error(error.message);
       }

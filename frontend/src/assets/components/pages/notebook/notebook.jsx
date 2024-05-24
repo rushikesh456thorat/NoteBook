@@ -55,14 +55,14 @@ const NoteBook = () => {
               <ProfileButton />
             </div>
           </div>
-          <div className="-mt-1">
+          <div className="-mt-1 w-full">
             <div>
               <ToolMenu />
             </div>
           </div>
         </div>
-        <div className="flex overflow-y-auto h-[90%] justify-center">
-          <div className="p-5 h-[calc(100vh-22.95vh)] overflow-y-auto max-sm:h-[calc(100vh-18.95vh)]  min-w-72 max-w-[90%] w-[90%] ">
+        <div className="flex  h-[90%] justify-center">
+          <div className="p-5 h-[calc(100vh-21.95vh)] overflow-y-auto max-sm:h-[calc(100vh-18.95vh)]  min-w-72 max-w-[90%] w-[90%] ">
             {/* Pass id and fileName to Page component */}
             <Page id={id} />
           </div>

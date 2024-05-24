@@ -10,6 +10,8 @@ const ChangePassword = () => {
         confirmPassword: ""
     });
 
+    document.title = "NoteBook - Change Password"
+
     const navigate = useNavigate();
 
     const { loading,isChange, changePassword } = useChangePassword();
