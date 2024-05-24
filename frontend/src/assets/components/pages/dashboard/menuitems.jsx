@@ -13,7 +13,7 @@ const MenuItems = ({ index, file ,isChecked, onCheckboxChange }) => {
   const handleClick = () => {
     try {
        // Wait for setOpenFile to complete
-      window.location.href = `/notebook/${file.fileId}`; // Redirect after setOpenFile
+      
     } catch (error) {
       console.error("Error setting file:", error);
       // Handle error, possibly show a message to the user
@@ -39,7 +39,7 @@ const MenuItems = ({ index, file ,isChecked, onCheckboxChange }) => {
         <td >
           <Link
             className="link link-primary"
-            to={`notebook/${file.fileId}`}
+            to={`../notebook/${file.fileId}`}
           >
             {file.fileName}
           </Link>
