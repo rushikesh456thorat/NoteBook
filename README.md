@@ -1,14 +1,40 @@
-# NoteBook
+# 📒 Notebook - MERN Web App
 
-NoteBook is a versatile and intuitive web application designed to cater to all your note-taking needs. Seamlessly blending functionality with simplicity, NoteBook offers a feature-rich platform reminiscent of Microsoft Notebook, tailored to meet the diverse needs of users across various domains.
+Notebook is a simple text editor based on the MERN stack. It has capabilities to store files online. It includes user authentication functionality.
 
-## Key Features
+## 🚀 Installation
 
-- **User-Friendly Interface**: Enjoy a clean and intuitive interface that makes navigating and organizing your notes effortless.
-- **Multi-Platform Accessibility**: Access your notes anytime, anywhere, with cross-platform compatibility across desktop, tablet, and mobile devices.
-- **Rich Formatting Options**: Customize your notes with various formatting tools, including text styles, bullet points, and highlighting, to make them visually appealing and easy to read.
-- **Seamless Synchronization**: Sync your notes across devices in real-time, ensuring you always have the latest version at your fingertips.
-- **Collaborative Capabilities**: Share your notes with colleagues, friends, or family members, and collaborate in real-time to enhance productivity and teamwork.
-- **Powerful Search Functionality**: Quickly locate specific notes using advanced search capabilities, including keyword search and filtering options.
-- **Secure Storage**: Rest assured knowing that your notes are securely stored and backed up, providing peace of mind against data loss.
+```bash
+# Install dependencies for the server
+npm install
+
+# Install dependencies for the frontend
+cd frontend
+npm install
+
+# Run the frontend & server with concurrently
+npm run dev
+
+# Run the server only
+npm run server
+
+# The server runs on http://localhost:5000 and the frontend on http://localhost:3000
+```
+
+## 🔧 Environment Variables
+
+Create a `.env` file with the following variables:
+```
+PORT=5000
+MONGO_DB_URL=<your-database-url>
+JWT_SECRET=<your-secret-key>
+```
+
+## ✍️ Author
+
+**Rushikesh Thorat**
+
+## ❓ Why
+
+* Practice
 
