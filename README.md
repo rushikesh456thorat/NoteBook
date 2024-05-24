@@ -12,10 +12,10 @@ npm install
 cd frontend
 npm install
 
-# Run the frontend & server with concurrently
+# Run the frontend 
 npm run dev
 
-# Run the server only
+# Run the server
 npm run server
 
 # The server runs on http://localhost:5000 and the frontend on http://localhost:3000
