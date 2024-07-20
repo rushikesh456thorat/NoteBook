@@ -29,6 +29,16 @@ PORT=5000
 MONGO_DB_URL=<your-database-url>
 JWT_SECRET=<your-secret-key>
 ```
+## How it looks
+### 1)Login Page
+![Login Page](/readme/screen1.png)
+
+
+### 2)Editor
+![Editor ](/readme/screen2.png)
+
+### 3)Dashboard
+![DashBoard](/readme/screen2.png)
 
 ## ✍️ Author
 
