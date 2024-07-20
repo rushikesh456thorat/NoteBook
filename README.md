@@ -38,7 +38,7 @@ JWT_SECRET=<your-secret-key>
 ![Editor ](/readme/screen2.png)
 
 ### 3)Dashboard
-![DashBoard](/readme/screen2.png)
+![DashBoard](/readme/image.png)
 
 ## ✍️ Author
 
